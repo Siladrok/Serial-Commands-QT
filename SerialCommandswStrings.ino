@@ -1,6 +1,6 @@
 
 void setup() {
-  Serial.begin(9600); // opens serial port, sets data rate to 9600 bps
+  Serial.begin(9600); 
   pinMode(LED_BUILTIN, OUTPUT);
 }
 
@@ -11,12 +11,12 @@ void loop() {
     String incomingByte = Serial.readString();
     if(incomingByte == "SetLedOn")
       {
-        digitalWrite(LED_BUILTIN, HIGH);    // turn the LED off by making the voltage LOW
+        digitalWrite(LED_BUILTIN, HIGH);    
         
       }
     else if(incomingByte == "SetLedOff")
       {
-        digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+        digitalWrite(LED_BUILTIN, LOW);    
         
       }
     else if(incomingByte == "ToggleLed")
